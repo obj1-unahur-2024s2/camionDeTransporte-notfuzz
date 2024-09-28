@@ -12,6 +12,8 @@ object camion {
       carga.remove(unaCosa)
     }
 
+    method bultos() = carga.sum({c => c.bultos()}) 
+
     method peligrosidad() = carga.sum({c => c.peligrosidad()})
 
     method pesosDeCargaImpares() = carga.all({c => c.odd()})
